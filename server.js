@@ -1,5 +1,5 @@
-const express = require("express"); // Импортируем express
-const { add, subtract} = require("./math"); // Правильный путь к файлу math.js
+const express = require("express");
+const { add, subtract} = require("./math");
 
 const app = express();
 const PORT = 3000;
@@ -16,7 +16,6 @@ app.get('/subtract', (req, res) => {
     res.send(`Result: ${result}`);
 });
 
-// Запуск сервера на порту 3000
 app.listen(3000, () => {
     console.log("Server is running on http://localhost:3000");
 });
