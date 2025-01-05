@@ -4,7 +4,9 @@
   "description": "practical work on module 8",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "author": "KostenkoSA",
   "license": "ISC",
