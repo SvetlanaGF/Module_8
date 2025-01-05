@@ -6,17 +6,24 @@ const PORT = 3000;
 
 app.get('/add', (req, res) => {
     const { a, b } = req.query;
+    if (a === undefined || b === undefined) {
+        return res.status(400).send("Parameters 'a' and 'b' are required.");
+    }
     const result = add(Number(a), Number(b));
     res.send(`Result: ${result}`);
 });
 
+
 app.get('/subtract', (req, res) => {
     const { a, b } = req.query;
+    if (a === undefined || b === undefined) {
+        return res.status(400).send("Parameters 'a' and 'b' are required.");
+    }
     const result = subtract(Number(a), Number(b));
     res.send(`Result: ${result}`);
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Server is running on http://localhost:3000");
 });
 
